@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+
+@import '_reset';
+@import '_typography';
+@import '_variables';
+
+img{
+	width: 100%;
+	vertical-align: bottom;
+}
+*{
+	box-sizing:border-box;
+}
+a{
+	color: $link;
+}
+/* PC */
+@media screen and (min-width: 768px) {
+	.forsp{
+		display: none;
+	}
+	@import '_common-pc';
+
+	body.index{
+		@import '_index-pc';
+	}
+}
+
+/* SP */
+@media screen and (max-width: 767px) {
+	.forpc{
+		display: none;
+	}
+	@import '_common-sp';
+
+	body.index{
+		@import '_index-sp';
+	}
+}

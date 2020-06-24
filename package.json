@@ -1,0 +1,30 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "rep",
+  "main": "index.js",
+  "author": "Tamiko Terasawa",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run serve & npm run watch:sass & npm run watch:babel",
+    "serve": "browser-sync start --server ./public/",
+    "sass": "node-sass ./src/scss/style.scss ./public/css/style.css --output-style expanded --watch",
+    "autoprefixer": "postcss -u autoprefixer -r ./public/css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run sass & npm run autoprefixer\"",
+    "watch:babel": "./node_modules/.bin/babel ./src/js -w --out-dir ./public/js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.5",
+    "postcss-cli": "^6.0.1"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 9"
+  ]
+}

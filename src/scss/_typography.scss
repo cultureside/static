@@ -1,0 +1,23 @@
+﻿/*----------------------------------------
+Typography
+-----------------------------------------*/
+
+/* Webfont */
+@import url('');
+
+/* Set Yu Gothic Weight */
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+/* Fonts */
+body{
+	font-family: "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Roboto, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
